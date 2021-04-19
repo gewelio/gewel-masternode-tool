@@ -8,11 +8,11 @@ Before describing the individual steps, the following prerequisites apply:
   * You have access to the server over SSH.
   * *geweld* has been installed in the home directory of the user which you use to log in to the server.
 
-## Sending 10000 Gewel to the address controlled by your hardware wallet
+## Sending 777 Gewel to the address controlled by your hardware wallet
 
 ### Step 1
 
-The procedure to send 10000 Gewel to a hardware wallet is described [here](config-masternodes-a.md#sending-1000-gewel-to-the-hardware-wallet-address).
+The procedure to send 777 Gewel to a hardware wallet is described [here](config-masternodes-a.md#sending-1000-gewel-to-the-hardware-wallet-address).
 
 ## Filling in the masternode configuration fields
 
@@ -31,7 +31,7 @@ Fill in the fields:
 
 Click the `Generate new` button on the right side of the `MN private key` field to generate a new masternode *private key*.
 
-  > Masternode **private keys**. Some users think that the masternode private key is somehow associated with the private key of the 10000 Gewel collateral, but in fact, they have no relationship. The masternode private key is generated independently and is only used in the process of signing the `start masternode` message and voting on proposals, and as such it is not particularly dangerous if it falls into the wrong hands. For this reason, the application includes a feature to automatically generate masternode private keys by simply clicking a button, thus avoiding a requirement to use *Gewel Core* for this purpose. From a technical point of view, a masternode private key is a normal private key in the *Gewel WIF uncompressed* format.
+  > Masternode **private keys**. Some users think that the masternode private key is somehow associated with the private key of the 777 Gewel collateral, but in fact, they have no relationship. The masternode private key is generated independently and is only used in the process of signing the `start masternode` message and voting on proposals, and as such it is not particularly dangerous if it falls into the wrong hands. For this reason, the application includes a feature to automatically generate masternode private keys by simply clicking a button, thus avoiding a requirement to use *Gewel Core* for this purpose. From a technical point of view, a masternode private key is a normal private key in the *Gewel WIF uncompressed* format.
 
 ### Step 5
 
