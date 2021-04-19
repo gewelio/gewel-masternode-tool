@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>906</width>
+    <height>499</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>1</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1">
+    <property name="bottomMargin">
+     <number>6</number>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="layMessage" stretch="0">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="lblMessage">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+        <property name="margin">
+         <number>0</number>
+        </property>
+        <property name="openExternalLinks">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="gbMain">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>1</horstretch>
+        <verstretch>1</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>12</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="layMasternodesControl" stretch="0,3,0,0,0,0,0,0">
+         <property name="spacing">
+          <number>8</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="minimumSize">
+            <size>
+             <width>140</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>140</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Masternodes</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="cboMasternodes">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>140</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>250</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>List of configured masternodes</string>
+           </property>
+           <property name="editable">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnNewMn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Create a new Masternode configuration</string>
+           </property>
+           <property name="text">
+            <string>New</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnDuplicateMn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="toolTip">
+            <string>Duplicate masternode entry</string>
+           </property>
+           <property name="text">
+            <string>Duplicate</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnDeleteMn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="toolTip">
+            <string>Delete current Masternode configuration</string>
+           </property>
+           <property name="text">
+            <string>Delete</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnEditMn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Enable editing</string>
+           </property>
+           <property name="text">
+            <string>Edit</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnCancelEditingMn">
+           <property name="text">
+            <string>Cancel editing</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QFrame" name="frmMasternodeDetails">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="spacing">
+           <number>-1</number>
+          </property>
+          <property name="leftMargin">
+           <number>12</number>
+          </property>
+          <property name="topMargin">
+           <number>12</number>
+          </property>
+          <property name="rightMargin">
+           <number>12</number>
+          </property>
+          <property name="bottomMargin">
+           <number>12</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1,0">
+            <property name="spacing">
+             <number>-1</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="lblMasternodeStatus">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Masternode status</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lblMnStatus">
+              <property name="frameShape">
+               <enum>QFrame::Panel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Sunken</enum>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+              <property name="textInteractionFlags">
+               <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnRefreshMnStatus">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>Get Masternode's status</string>
+              </property>
+              <property name="text">
+               <string>Get status</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="spacing">
+          <number>-1</number>
+         </property>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnBroadcastMn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Broadcast information about the Masternode</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Start Masternode using hardware wallet</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnMigrateToGMN">
+           <property name="toolTip">
+            <string>Register new/update existing deterministic (DIP-3) masternode or migrate from non-deterministic to deterministic masternode. </string>
+           </property>
+           <property name="text">
+            <string>Send ProRegTx</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>906</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <widget class="QMenu" name="menuClear">
+     <property name="title">
+      <string>Clear</string>
+     </property>
+     <addaction name="action_clear_wallet_cache"/>
+     <addaction name="action_clear_proposals_cache"/>
+    </widget>
+    <addaction name="action_transfer_funds_for_any_address"/>
+    <addaction name="separator"/>
+    <addaction name="action_sign_message_for_cur_mn"/>
+    <addaction name="action_hw_configuration"/>
+    <addaction name="action_hw_initialization_recovery"/>
+    <addaction name="separator"/>
+    <addaction name="action_import_masternode_conf"/>
+    <addaction name="separator"/>
+    <addaction name="action_check_for_updates"/>
+    <addaction name="action_command_console"/>
+    <addaction name="action_open_log_file"/>
+    <addaction name="action_open_data_folder"/>
+    <addaction name="menuClear"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="action_open_recent_files">
+     <property name="title">
+      <string>Recent Configuration Files</string>
+     </property>
+    </widget>
+    <addaction name="action_load_config_file"/>
+    <addaction name="action_open_recent_files"/>
+    <addaction name="action_save_config_file"/>
+    <addaction name="action_save_config_file_as"/>
+    <addaction name="separator"/>
+    <addaction name="action_open_settings_window"/>
+    <addaction name="separator"/>
+    <addaction name="action_about_app"/>
+    <addaction name="action_about_qt"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuTools"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_open_settings_window"/>
+   <addaction name="action_save_config_file"/>
+   <addaction name="separator"/>
+   <addaction name="action_check_network_connection"/>
+   <addaction name="separator"/>
+   <addaction name="action_run_trezor_emulator"/>
+   <addaction name="action_test_hw_connection"/>
+   <addaction name="action_disconnect_hw"/>
+   <addaction name="separator"/>
+   <addaction name="action_open_proposals_window"/>
+   <addaction name="separator"/>
+   <addaction name="action_transfer_funds_for_any_address"/>
+   <addaction name="action_sign_message_for_cur_mn"/>
+  </widget>
+  <action name="action_transfer_funds_for_cur_mn">
+   <property name="text">
+    <string>Transfer Funds for Current Masternode...</string>
+   </property>
+  </action>
+  <action name="action_transfer_funds_for_all_mns">
+   <property name="text">
+    <string>Transfer Funds for All Masternodes</string>
+   </property>
+  </action>
+  <action name="action_transfer_funds_for_any_address">
+   <property name="text">
+    <string>Transfer Funds / Wallet</string>
+   </property>
+  </action>
+  <action name="action_sign_message_for_cur_mn">
+   <property name="text">
+    <string>Sign Message for Current Masternode...</string>
+   </property>
+  </action>
+  <action name="action_hw_configuration">
+   <property name="text">
+    <string>Hardware Wallet PIN/passphrase Configuration...</string>
+   </property>
+  </action>
+  <action name="action_load_config_file">
+   <property name="text">
+    <string>Open Configuration File...</string>
+   </property>
+   <property name="toolTip">
+    <string>Open configuration file</string>
+   </property>
+  </action>
+  <action name="action_save_config_file_as">
+   <property name="text">
+    <string>Save Configuration As...</string>
+   </property>
+  </action>
+  <action name="action_save_config_file">
+   <property name="text">
+    <string>Save Configuration</string>
+   </property>
+  </action>
+  <action name="action_check_network_connection">
+   <property name="text">
+    <string>Check Network Connection</string>
+   </property>
+   <property name="toolTip">
+    <string>Check Gewel Network Connection</string>
+   </property>
+  </action>
+  <action name="action_open_settings_window">
+   <property name="text">
+    <string>Settings</string>
+   </property>
+   <property name="toolTip">
+    <string>Settings</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::PreferencesRole</enum>
+   </property>
+  </action>
+  <action name="action_open_proposals_window">
+   <property name="text">
+    <string>Proposals</string>
+   </property>
+   <property name="toolTip">
+    <string>Proposals</string>
+   </property>
+  </action>
+  <action name="action_test_hw_connection">
+   <property name="text">
+    <string>Test Hardware Wallet Connection</string>
+   </property>
+  </action>
+  <action name="action_disconnect_hw">
+   <property name="text">
+    <string>Disconnect Hardware Wallet</string>
+   </property>
+  </action>
+  <action name="action_hw_initialization_recovery">
+   <property name="text">
+    <string>Hardware Wallet Initialization/Recovery...</string>
+   </property>
+  </action>
+  <action name="action_check_for_updates">
+   <property name="text">
+    <string>Check For Updates</string>
+   </property>
+  </action>
+  <action name="action_open_log_file">
+   <property name="text">
+    <string>Open Log File</string>
+   </property>
+   <property name="shortcut">
+    <string>Meta+Alt+L</string>
+   </property>
+  </action>
+  <action name="action_about_app">
+   <property name="text">
+    <string>About GewelMasternodeTool...</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::AboutRole</enum>
+   </property>
+  </action>
+  <action name="action_import_masternode_conf">
+   <property name="text">
+    <string>Import masternodes from the masternode.conf file...</string>
+   </property>
+  </action>
+  <action name="action_about_qt">
+   <property name="text">
+    <string>About Qt...</string>
+   </property>
+   <property name="toolTip">
+    <string>About Qt</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::AboutQtRole</enum>
+   </property>
+  </action>
+  <action name="action_gen_mn_priv_key_compressed">
+   <property name="text">
+    <string>Generate masternode private key (compressed)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+C</string>
+   </property>
+  </action>
+  <action name="action_gen_mn_priv_key_uncompressed">
+   <property name="text">
+    <string>Generate masternode private key (uncompressed)</string>
+   </property>
+   <property name="toolTip">
+    <string>Generate masternode private key (uncompressed)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+U</string>
+   </property>
+  </action>
+  <action name="action_command_console">
+   <property name="text">
+    <string>Command Console</string>
+   </property>
+   <property name="shortcut">
+    <string>Meta+Alt+C</string>
+   </property>
+  </action>
+  <action name="action_run_trezor_emulator">
+   <property name="text">
+    <string>Run Trezor T emulator</string>
+   </property>
+   <property name="toolTip">
+    <string>Run Trezor T emulator</string>
+   </property>
+  </action>
+  <action name="action_open_data_folder">
+   <property name="text">
+    <string>Open Application Data Folder</string>
+   </property>
+  </action>
+  <action name="action_clear_wallet_cache">
+   <property name="text">
+    <string>Wallet Cache</string>
+   </property>
+  </action>
+  <action name="action_clear_proposals_cache">
+   <property name="text">
+    <string>Proposals Cache</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>cboMasternodes</tabstop>
+  <tabstop>btnNewMn</tabstop>
+  <tabstop>btnEditMn</tabstop>
+  <tabstop>btnDeleteMn</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

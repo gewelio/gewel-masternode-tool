@@ -1,0 +1,16 @@
+python-bitcoinrpc>=1.0
+bitcoin>=1.1.42
+keepkey==6.1.0
+PyQt5==5.9.2
+PyQtChart==5.9.2
+pyinstaller>=3.3
+paramiko>=2.2.1
+requests>=2.18.4
+mnemonic>=0.18
+simplejson
+cryptography
+bip32utils
+more-itertools
+-e git+https://github.com/gewelio/gewel-btchip-python#egg=gewel-btchip-python
+-e git+https://github.com/gewelio/trezor-firmware#egg=trezor&subdirectory=python
+python-bls

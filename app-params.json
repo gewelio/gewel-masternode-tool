@@ -1,0 +1,50 @@
+{
+  "appCurrentVersion": "0.1.0",
+  "exeDownloads": {
+    "mac": "https://github.com/gewelio/gewel-masternode-tool/releases/download/v0.1.0/GewelMasternodeTool_0.1.0.mac.zip",
+    "win64": "https://github.com/gewelio/gewel-masternode-tool/releases/download/v0.1.0/GewelMasternodeTool_0.1.0.win64.zip",
+    "linux": "https://github.com/gewelio/gewel-masternode-tool/releases/download/v0.1.0/GewelMasternodeTool_0.1.0.linux.tar.gz"
+  },
+  "defaultGeweldProtocol": {
+    "mainnet": 70211,
+    "testnet": 70211
+  },
+  "sporks": [
+    {
+      "name": "SPORK_6_NEW_SIGS",
+      "active": {
+        "mainnet": false,
+        "testnet": false
+      }
+    },
+    {
+      "name": "SPORK_15_DETERMINISTIC_MNS_ENABLED",
+      "active": {
+        "mainnet": false,
+        "testnet": false
+      }
+    }
+  ],
+  "features": {
+    "NON_DETERMINISTIC_MNS": {
+      "mainnet": {
+        "status": "disabled",
+        "priority": 4
+      },
+      "testnet": {
+        "status": "disabled",
+        "priority": 4
+      }
+    },
+    "DETERMINISTIC_MNS": {
+      "mainnet": {
+        "status": "enabled",
+        "priority": 4
+      },
+      "testnet": {
+        "status": "enabled",
+        "priority": 4
+      }
+    }
+  }
+}
