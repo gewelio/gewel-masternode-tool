@@ -22,7 +22,7 @@ import app_cache
 import app_defs
 import hw_intf
 from app_config import MasternodeConfig, AppConfig, InputKeyType
-from app_defs import FEE_DUFF_PER_BYTE
+from app_defs import FEE_ADAM_PER_BYTE
 from bip44_wallet import Bip44Wallet, BreakFetchTransactionsException, find_wallet_addresses
 from common import CancelException
 from gewel_utils import generate_bls_privkey, generate_wif_privkey, validate_address, wif_privkey_to_address, \
@@ -35,7 +35,7 @@ from wnd_utils import WndUtils
 
 
 STEP_MN_DATA = 1
-STEP_DASHD_TYPE = 2
+STEP_GEWELD_TYPE = 2
 STEP_AUTOMATIC_RPC_NODE = 3
 STEP_MANUAL_OWN_NODE = 4
 STEP_SUMMARY = 5
@@ -660,7 +660,7 @@ class RegMasternodeDlg(QDialog, ui_reg_masternode_dlg.Ui_RegMasternodeDlg, WndUt
             self.btnContinue.setEnabled(True)
             self.btnCancel.setEnabled(True)
 
-        elif self.current_step == STEP_DASHD_TYPE:
+        elif self.current_step == STEP_GEWELD_TYPE:
             self.stackedWidget.setCurrentIndex(1)
             self.upd_node_type_info()
             self.btnContinue.setEnabled(True)
@@ -1032,12 +1032,12 @@ class RegMasternodeDlg(QDialog, ui_reg_masternode_dlg.Ui_RegMasternodeDlg, WndUt
         cs = None
         if self.current_step == STEP_MN_DATA:
             if self.validate_data():
-                cs = STEP_DASHD_TYPE
+                cs = STEP_GEWELD_TYPE
             else:
                 return
             self.step_stack.append(self.current_step)
 
-        elif self.current_step == STEP_DASHD_TYPE:
+        elif self.current_step == STEP_GEWELD_TYPE:
             if self.get_gewel_node_type() == NODE_TYPE_PUBLIC_RPC:
                 cs = STEP_AUTOMATIC_RPC_NODE
             elif self.get_gewel_node_type() == NODE_TYPE_OWN:
@@ -1165,7 +1165,7 @@ class RegMasternodeDlg(QDialog, ui_reg_masternode_dlg.Ui_RegMasternodeDlg, WndUt
                 if not self.geweld_intf.is_current_connection_public():
                     try:
                         # find an address to be used as the source of the transaction fees
-                        min_fee = round(1024 * FEE_DUFF_PER_BYTE / 1e8, 8)
+                        min_fee = round(1024 * FEE_ADAM_PER_BYTE / 1e8, 8)
                         balances = self.geweld_intf.listaddressbalances(min_fee)
                         bal_list = []
                         for addr in balances:

@@ -386,7 +386,7 @@ class Bip44Wallet(QObject):
 
     def _get_child_address(self, parent_key_entry: Bip44Entry, child_addr_index: int) -> Bip44AddressType:
         """
-        :return: Tuple[int <id db>, str <address>, int <balance in duffs>]
+        :return: Tuple[int <id db>, str <address>, int <balance in adams>]
         """
         if parent_key_entry.id is None:
             raise Exception('parent_key_entry.is is null')

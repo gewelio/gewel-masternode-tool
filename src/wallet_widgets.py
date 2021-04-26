@@ -18,7 +18,7 @@ from PyQt5.QtWidgets import QPushButton, QToolButton, QWidgetItem, QSpacerItem, 
 import app_cache
 import app_utils
 import gewel_utils
-from app_defs import FEE_DUFF_PER_BYTE, MIN_TX_FEE
+from app_defs import FEE_ADAM_PER_BYTE, MIN_TX_FEE
 from common import CancelException
 from encrypted_files import write_file_encrypted, read_file_encrypted
 from hw_common import HwSessionInfo
@@ -609,7 +609,7 @@ class SendFundsDestination(QtWidgets.QWidget, WndUtils):
 
         if self.inputs_total_amount > 0.0:
             bytes = (self.inputs_count * 148) + (recipients_count * 34) + 11
-            fee = round(bytes * FEE_DUFF_PER_BYTE, 8)
+            fee = round(bytes * FEE_ADAM_PER_BYTE, 8)
             if not fee:
                 fee = MIN_TX_FEE
             fee = round(fee * fee_multiplier / 1e8, 8)
